@@ -105,10 +105,10 @@ backup(){
   mkdir -p ~/code/dots/.config/mpv
   mkdir -p ~/code/dots/.config/git
   mkdir -p ~/code/dots/.config/nvim
-  cp -i ~/{.zshrc,.gitconfig,.tmux.conf} ~/code/dots/
-  cp -i ~/.config/mpv/mpv.conf ~/code/dots/.config/mpv
-  cp -i ~/.config/git/ignore ~/code/dots/.config/git/ignore
-  cp -i ~/.config/nvim/{init.vim,coc-settings.json} ~/code/dots/.config/nvim
+  cp ~/{.zshrc,.gitconfig,.tmux.conf} ~/code/dots/
+  cp ~/.config/mpv/mpv.conf ~/code/dots/.config/mpv
+  cp ~/.config/git/ignore ~/code/dots/.config/git/ignore
+  cp ~/.config/nvim/{init.vim,coc-settings.json} ~/code/dots/.config/nvim
   cd ~/code/dots
 
   # such security
