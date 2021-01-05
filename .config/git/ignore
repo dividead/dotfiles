@@ -1,0 +1,6 @@
+node_modules
+build/
+tmp/
+watch.pid
+.DS_Store
+npm-debug.log

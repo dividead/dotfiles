@@ -1,0 +1,7 @@
+[user]
+	name = Daniil Pletnev
+	email = dpletnev@detmir.ru
+[help]
+	autocorrect = 1
+[pull]
+	rebase = true
