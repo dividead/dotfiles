@@ -5,5 +5,3 @@
 	autocorrect = 1
 [pull]
 	rebase = true
-[oh-my-zsh]
-	hide-dirty = 1
