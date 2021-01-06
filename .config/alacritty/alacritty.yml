@@ -1,0 +1,27 @@
+live_config_reload: true
+
+window:
+  decorations: none
+  startup_mode: SimpleFullscreen
+
+font:
+  size: 12.0
+
+selection:
+  save_to_clipboard: true
+
+key_bindings:
+  - { key: Backslash, mods: Command, chars: "\x02\x25" } #ctrl+b+" -> split W 
+  - { key: Minus, mods: Command, chars: "\x02\x22" } #ctrl+b+% -> split H 
+  - { key: L, mods: Command, chars: "\x02\x77" } #ctrl+b+w -> list windows
+  - { key: N, mods: Command, chars: "\x02\x63" } #ctrl+b+c -> new window 
+  - { key: W, mods: Command, chars: "\x02\x26" } #ctrl+b+& -> close window
+  - { key: D, mods: Command, chars: "\x04" } #ctrl+d -> close pane
+  - { key: Comma, mods: Command, chars: "\x02\x2c" } #ctrl+b+, -> rename window
+  - { key: Key1, mods: Command, chars: "\x02\x31" } #ctrl+b+1 -> jump to 1
+  - { key: Key2, mods: Command, chars: "\x02\x32" } #ctrl+b+2 -> jump to 2
+  - { key: Key3, mods: Command, chars: "\x02\x33" } #ctrl+b+3 -> jump to 3
+  - { key: Key4, mods: Command, chars: "\x02\x34" } #ctrl+b+4 -> jump to 4
+  - { key: Key5, mods: Command, chars: "\x02\x35" } #ctrl+b+5 -> jump to 5
+    #- { key: V, mods: Command, action: Paste }
+    #- { key: C, mods: Command, action: Copy }
