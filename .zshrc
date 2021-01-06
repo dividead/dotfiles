@@ -1,3 +1,5 @@
+PROMPT='%F{red}%1~ > %F{reset}'
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -75,6 +77,8 @@ alias vimdiff='nvim -d'
 
 alias grep='rg'
 
+alias mpv='mpv "$(fzf)"'
+
 alias codev='git checkout develop'
 alias coma='git checkout master'
 alias codot='git checkout .'
@@ -114,3 +118,5 @@ backup(){
   git push
   cd -
 }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
