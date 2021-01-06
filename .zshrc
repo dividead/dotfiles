@@ -2,6 +2,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+export HISTCONTROL=ignoreboth:erasedups
+
 export FZF_DEFAULT_COMMAND='rg --files --follow --hidden'
 
 dex() {
@@ -89,7 +91,7 @@ vpn(){
   if [ ${on} != 0 ]; then
     /opt/cisco/anyconnect/bin/vpn disconnect
   else
-    printf "${SECRET_VPNPASS}\ny" | /opt/cisco/anyconnect/bin/vpn -s connect $SEECRET_VPNHOST
+    printf "${SECRET_VPNPASS}\ny" | /opt/cisco/anyconnect/bin/vpn -s connect $SECRET_VPNHOST
   fi
 }
 
