@@ -87,8 +87,7 @@ alias gammend='git add src && git commit --amend --no-edit'
 alias run='npm run dev'
 
 vpn(){
-  on=$(/opt/cisco/anyconnect/bin/vpn state | grep -c "state: Connected")
-  if [ ${on} != 0 ]; then
+  if (/opt/cisco/anyconnect/bin/vpn state | grep -c "state: Connected"); then
     /opt/cisco/anyconnect/bin/vpn disconnect
   else
     printf "${SECRET_VPNPASS}\ny" | /opt/cisco/anyconnect/bin/vpn -s connect $SECRET_VPNHOST
