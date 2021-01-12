@@ -1,7 +1,7 @@
 "vim plug
 call plug#begin()
-"Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'morhetz/gruvbox'
+Plug 'liuchengxu/vim-which-key'
 Plug 'vim-airline/vim-airline'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -44,13 +44,30 @@ colorscheme gruvbox
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'jsformatter'
 
-"custom keys
-"fzf (ctrl+t)
-nnoremap <C-T> :Files<cr> 
-"ripgrep
-nnoremap \ :Rg<CR>
+"WhichKey
+let mapleader = "\<Space>"
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+set timeoutlen=500
+
+let g:which_key_map = {}
+
+let g:which_key_map[' '] = [ ':Files',  'search files' ]
+let g:which_key_map['s'] = [ ':Rg',  'search pattern']
+let g:which_key_map['-'] = [ '<C-W>s', 'split horizontal']
+let g:which_key_map['='] = [ '<C-W>v',  'split vertical']
+let g:which_key_map['d'] = [ '<C-W>c',  'close split']
+let g:which_key_map['/'] = [ ':let @/ = ""',  'remove highlight']
+
+" Hide status line
+autocmd! FileType which_key
+autocmd  FileType which_key set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
+
+" call which_key#register('@', "g:which_key_map")
+call which_key#register('<Space>', "g:which_key_map")
+
 "coc
 nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+"nmap <silent> gy <Plug>(coc-type-definition)
+"nmap <silent> gi <Plug>(coc-implementation)
+"nmap <silent> gr <Plug>(coc-references)

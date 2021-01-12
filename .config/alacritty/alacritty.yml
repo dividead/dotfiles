@@ -12,11 +12,11 @@ selection:
 
 #xxd -psd
 key_bindings:
-  - { key: Backslash, mods: Command, chars: "\x02\x25" } #ctrl+b+" -> split W 
-  - { key: Minus, mods: Command, chars: "\x02\x22" } #ctrl+b+% -> split H 
+  - { key: W, mods: Command, chars: "\x02\x25" } #ctrl+b+" -> split W 
+  - { key: H, mods: Command, chars: "\x02\x22" } #ctrl+b+% -> split H 
   - { key: L, mods: Command, chars: "\x02\x77" } #ctrl+b+w -> list windows
   - { key: N, mods: Command, chars: "\x02\x63" } #ctrl+b+c -> new window 
-  - { key: W, mods: Command, chars: "\x02\x26" } #ctrl+b+& -> close window
+  - { key: Q, mods: Command, chars: "\x02\x26" } #ctrl+b+& -> close window
   - { key: D, mods: Command, chars: "\x04" } #ctrl+d -> close pane
   - { key: Z, mods: Command, chars: "\x02\x7a" } #ctrl+b+z -> zoom pane
   - { key: Comma, mods: Command, chars: "\x02\x2c" } #ctrl+b+, -> rename window
