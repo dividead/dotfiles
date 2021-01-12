@@ -51,12 +51,15 @@ set timeoutlen=500
 
 let g:which_key_map = {}
 
-let g:which_key_map[' '] = [ ':Files',  'search files' ]
-let g:which_key_map['s'] = [ ':Rg',  'search pattern']
-let g:which_key_map['-'] = [ '<C-W>s', 'split horizontal']
-let g:which_key_map['='] = [ '<C-W>v',  'split vertical']
-let g:which_key_map['d'] = [ '<C-W>c',  'close split']
-let g:which_key_map['/'] = [ ':let @/ = ""',  'remove highlight']
+let g:which_key_map[' '] = [':Files', 'search files']
+let g:which_key_map['s'] = [':Rg', 'search pattern']
+let g:which_key_map['-'] = ['<C-W>s', 'split horizontal']
+let g:which_key_map['='] = ['<C-W>v', 'split vertical']
+let g:which_key_map['d'] = ['<C-W>c', 'close split']
+let g:which_key_map['/'] = [':let @/ = ""', 'remove highlight']
+let g:which_key_map['b'] = ['Buffers', 'fzf-buffer']
+let g:which_key_map['n'] = ['bnext', 'next buffer']
+let g:which_key_map['w'] = ['bd', 'close buffer']
 
 " Hide status line
 autocmd! FileType which_key
